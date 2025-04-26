@@ -45,6 +45,7 @@
       display: flex; justify-content: center; align-items: center; text-align: center;
     }
     .hero video {
+      /* Fullscreen background video */
       position: absolute; top: 50%; left: 50%;
       width: 100%; height: 100%; object-fit: cover;
       transform: translate(-50%, -50%);
@@ -52,19 +53,22 @@
       z-index: -2;
     }
     .hero .overlay {
+      /* Dark overlay for contrast */
       position: absolute; top:0; left:0; right:0; bottom:0;
       background: rgba(0,0,0,0.4); z-index: -1;
     }
     .hero .hero-content {
+      /* Logo and title container */
       position: relative; z-index: 1;
       display: flex; flex-direction: column; align-items: center; gap: 1rem;
       animation: fadeInUp 1s ease;
     }
-    .hero .hero-content img.logo { width: 140px; }
+    .hero .hero-content img.logo { /* OM logo */ width: 140px; }
     .hero .hero-content h1.title {
       font-size: 3.5rem; letter-spacing: 2px;
     }
     .hero .hero-content .btn {
+      /* Book Your Fit button */
       margin-top: 1rem; padding: 0.8rem 1.8rem;
       background: #7b3f00; color: #f4f1e8; border: none;
       border-radius: 6px; font-weight: bold; transition: background 0.3s;
@@ -72,7 +76,7 @@
     }
     .hero .hero-content .btn:hover { background: #a1571f; }
 
-    /* Gallery (Responsive) */
+    /* Responsive gallery for images & videos */
     .gallery {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1.5rem;
     }
@@ -83,7 +87,7 @@
     }
     .gallery video { display: block; }
 
-    /* Section Intro */
+    /* Section Intro Title Styling */
     .section-intro { margin-bottom: 1rem; text-align: center; }
     .section-intro h2 {
       font-size: 2.5rem; position: relative;
@@ -119,7 +123,7 @@
 
   <!-- WhatsApp Chat Button -->
   <a href="https://wa.me/7073557312" class="whatsapp-float" target="_blank" rel="noopener">
-    <img src="assets/images/whatsapp-icon.png" alt="Chat on WhatsApp">
+    <img src="assets/images/pngwing.com (6).png" alt="Chat on WhatsApp">
   </a>
 
   <!-- Hero Section with Video Background -->
@@ -144,13 +148,19 @@
     </div>
   </section>
 
-  <!-- Craftsmanship Section -->
+  <!-- Craftsmanship Section: Tour & WhatsApp Demo Videos -->
   <section id="craft">
     <div class="section-intro"><h2>Craft in Motion</h2></div>
     <p>Witness our secret formula perfected over generations. Every stitch speaks of legacy.</p>
     <div class="gallery">
-      <img src="assets/images/pngtree-manual-sew-machine-icon-simple-ilsew-machine-icon-png-image_2017084.jpg" alt="Stitch Animation">
-      <img src="assets/images/sewing-process.jpg" alt="Sewing Process">
+      <!-- Tour showcase video -->
+      <video autoplay muted loop playsinline>
+        <source src="assets/images/tour.mp4" type="video/mp4">
+      </video>
+      <!-- WhatsApp demo video -->
+      <video autoplay muted loop playsinline>
+        <source src="assets/images/WhatsApp Video 2025-04-24 at 7.10.54 PM.mp4" type="video/mp4">
+      </video>
     </div>
   </section>
 
@@ -164,7 +174,7 @@
     </div>
   </section>
 
-  <!-- Community Section with Dance Video and Desi.png -->
+  <!-- Community Section with Dance Video & Desi Image -->
   <section id="community">
     <div class="section-intro"><h2>Our Community</h2></div>
     <div class="gallery">
@@ -175,7 +185,7 @@
     </div>
   </section>
 
-  <!-- Contact & Map -->
+  <!-- Contact & Map Section -->
   <section id="contact">
     <div class="section-intro"><h2>Visit & Connect</h2></div>
     <p>OM TAILOR Dhoti Collection, Nagar Village, Rajasthan</p>
@@ -185,13 +195,23 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.521660140101!2d71.7400806!3d25.2519452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394489f544907d3d%3A0xa305fce55d416c26!2sOM%20TAILORS%20DHOTI%20COLLECTION%20NAGAR!5e0!3m2!1sen!2sin!4v1713856356909!5m2!1sen!2sin" allowfullscreen></iframe>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer with Social Icons & Credits -->
   <footer>
-    <p>Connect with us: <a href="https://www.instagram.com/omtailornagar/" target="_blank">@omtailornagar</a> | <a href="https://www.facebook.com/omtailornagar" target="_blank">Facebook</a></p>
-    <p>© OM TAILOR 1974 - Present</p>
+    <div class="footer-content">
+      <!-- Instagram Icon Link -->
+      <a href="https://www.instagram.com/omtailornagar/" target="_blank">
+        <img src="assets/images/pngwing.com (8).png" alt="Instagram @omtailornagar" width="24">
+      </a>
+      <!-- Facebook Link -->
+      <a href="https://www.facebook.com/omtailornagar" target="_blank">Facebook</a>
+      <p>© OM TAILOR 1974 - Present</p>
+      <!-- Credit Line -->
+      <p>POWERED by LuckyDaddy Inc (LAXMAN) | <a href="https://www.instagram.com/1axmann/" target="_blank">Connect the coder</a></p>
+    </div>
   </footer>
 
   <script>
+    // Smooth scroll to Connect section on button click
     document.getElementById('bookBtn').addEventListener('click', function() {
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     });
